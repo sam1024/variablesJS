@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no">
+    <title>Agenda</title>
+    <link rel="stylesheet" href="css/agenda.css">
+    <link rel="stylesheet" href="css/fontawesome-all.css">
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <h2>Agenda de Sam</h2>
+      </div>
+    </header>
+    <main>
+      <div class="modal">
+        <div class="container">
+          <form action="" method="post">
+            <input type="text" id="nombre" name="nombre" class="input_field" placeholder="Nombre" autofocus>
+            <input type="text" id="tel" name="tel" class="input_field" placeholder="Telefono">
+            <input type="text" id="direccion" name="direccion" class="input_field" placeholder="Direccion">
+            <input type="text" id="email" name="email" class="input_field" placeholder="Correo">
+            <button type="submit" id="btn_save" name="button" class="btns">Guardar</button>
+            <button type="button" id="btn_cancel" name="btn_cancel" class="btns">Cancelar</button>
+          </form>
+        </div>
+      </div>
+      <div class="container">
+        <table>
+          <thead>
+            <tr>
+              <th>Nombre</th>
+              <th>Telefono</th>
+              <th>Dirección</th>
+              <th>Correo</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Sam</td>
+              <td>444</td>
+              <td>Cumbres</td>
+              <td>sam</td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="div_icon"><span id="add_icon" class="fas fa-plus"></span></div>
+      </div>
+    </main>
+    <script type="text/javascript" src="js/jQuery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="js/agenda.js"></script>
+  </body>
+</html>

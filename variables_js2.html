@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no">
+    <title>Recibir variables</title>
+    <link rel="stylesheet" href="css/variables_js2.css">
+  </head>
+  <body>
+    <main>
+      <div class="container">
+        <input type="text" id="par1">
+        <input type="text" id="par2">
+      </div>
+    </main>
+
+    <script type="text/javascript">
+      let input1 = document.getElementById('par1'), input2 = document.getElementById('par2');
+      let params = (new URL(document.location)).searchParams;
+      let num1 = params.get("var1");
+      let num2 = params.get("var2");
+      input1.value = num1;
+      input2.value = num2;
+
+      /*let par1, par2;
+      function getQueryVariable(variable) {
+        var query = window.location.search.substring(1);
+        /****
+        window REPRESENTA LA VENTANA QUE CONTIENE UN DOCUMENTO DOM
+        location RETORNA UN OBJETO LOCATION CON INFORMACION ACERCA DE LA UBICACION ACTUAL DEL DOCUMENTO.
+        location EN LA MAYORIA DE LOS CASOS ES UNA CADENA DE CARACTERES QUE NOS DEVUELVE LA URL
+        search ES UN DOMSTRING QUE CONTIENE UN '?' SEGUIDO POR LOS PARAMETROS O EL QUERYSTRING DE LA URL.
+        EL SUBSTRING() MÉTODO DEVUELVE UN SUBCONJUNTO DE UN OBJETO STRING, ESTE METODO RECIBE 2 PARAMETROS
+        ENTEROS ENTRE 0 Y LA LONGITUD DE LA CADENA, SI SE OMITE EL SEGUNDO PARAMETRO EL METODO REGRESARÁ
+        TODOS LOS CARACTERES HASTA EL FINAL DE LA CADENA
+        ****/
+        /*var vars = query.split("&");
+        /****
+        split ES UN METODO QUE DIVIDE UNA CADENA EN UN ARRAY DE CADENAS
+        ****/
+        /*for (var i=0;i<vars.length;i++) {
+          var pair = vars[i].split("=");
+          if(pair[0] == variable) {
+            return pair[1];
+          }
+        }
+        return(false);
+      }
+
+      par1 = getQueryVariable("var1");
+      par2 = getQueryVariable("var2");
+      input1.value = par1;
+      input2.value = par2;*/
+    </script>
+  </body>
+</html>

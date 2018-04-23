@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no">
+    <title>Pasar variables por url</title>
+    <link rel="stylesheet" href="css/variables_js.css">
+  </head>
+  <body>
+    <main>
+      <div class="container">
+        <h2>Pasar variables por URL</h2>
+        <input type="text" name="num1" id="num1" autofocus>
+        <input type="text" name="num2" id="num2" >
+        <button type="button" name="button" onclick="valida()">Enviar</button>
+        <!--a href="#">Enlace</a-->
+      </div>
+    </main>
+    <script type="text/javascript">
+      function valida() {
+        if((document.getElementById('num1').value === "") || document.getElementById('num2').value === "") {
+          alert("Debes ingresar los numeros");
+        } else {
+          let num1 = document.getElementById('num1');
+          let num2 = document.getElementById("num2");
+          location.href = `variables_js2.html?var1=${num1.value}&var2=${num2.value}`;
+        }
+      }
+      /*function enviar() {
+        let num1 = document.getElementById('num1');
+        let num2 = document.getElementById("num2");
+        location.href = `variables_js2.html?var1=${num1.value}&var2=${num2.value}`;
+      }*/
+    </script>
+  </body>
+</html>
